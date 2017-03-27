@@ -18,3 +18,7 @@ Thumbs.db
 .log
 .lock
 .tmp
+
+# Ignore DB config file #
+#########################
+config/config.php
