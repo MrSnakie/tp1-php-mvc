@@ -5,10 +5,9 @@
         <table class="col-md-12 table table-hover">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Prénom</th>
                     <th>Nom</th>
-                    <th>Date de naissance</th>
+                    <th>Âge</th>
                     <th>Adresse</th>
                     <th>Code postal</th>
                     <th>Téléphone</th>
@@ -18,10 +17,9 @@
             <tbody>
                 <?php foreach(App::getInstance()->getTable('users')->all() as $user): ?>
                     <tr>
-                        <td><?= $user->id ?></td>
                         <td><?= $user->first_name ?></td>
                         <td><?= $user->last_name ?></td>
-                        <td><?= $user->birth_date ?></td>
+                        <td><?= $user->age ?></td>
                         <td><?= $user->adress ?></td>
                         <td><?= $user->postal_code ?></td>
                         <td><?= $user->phone ?></td>

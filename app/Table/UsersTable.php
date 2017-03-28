@@ -22,23 +22,7 @@ class UsersTable extends Table
                                 FROM users
                                 LEFT JOIN service
                                        ON service_id = service.id
+                                ORDER BY users.first_name
                             ");
     }
-
-    // public function find($id)
-    // {
-    //     return $this->query(" SELECT users.id,
-    //                                  users.first_name,
-    //                                  users.last_name,
-    //                                  users.birth_date,
-    //                                  users.adress,
-    //                                  users.postal_code,
-    //                                  users.phone,
-    //                                  service.name as services
-    //                             FROM users
-    //                             LEFT JOIN service
-    //                                    ON services_id = service.id
-    //                             WHERE users.id = ?
-    //                         ", [$id], true);
-    // }
 }

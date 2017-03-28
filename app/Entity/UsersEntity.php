@@ -5,8 +5,8 @@ use Core\Entity\Entity;
 
 class UsersEntity extends Entity
 {
-    public function getUrl()
+    public function getAge()
     {
-        return 'index.php?p=users.single&id='.$this->id;
+        return (int)((time()-strtotime($this->birth_date))/(60*60*24*365));
     }
 }
