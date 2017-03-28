@@ -27,22 +27,20 @@ if($auth->logged()){
 
 ##################################
 
-ob_start();
+ob_start(); // On créer un cache
 
 if($page === 'home'){ // Si la variable 'page' est égale à 'home'
 	require ROOT.'/pages/posts/home.php'; // Alors on fait appelle au fichier 'home.php'
-}elseif($page === 'posts.category'){ // Sinon si la variable 'page' est égale à 'posts.category'
-	require ROOT.'/pages/posts/category.php'; // Alors on fait appelle au fichier 'category.php'
-}elseif($page === 'posts.single'){ // Sinon si la variable 'page' est égale à 'posts.single'
-	require ROOT.'/pages/posts/single.php'; // Alors on fait appelle au fichier 'single.php'
-}elseif($page === 'Connexion'){
-	require ROOT.'/pages/users/login.php'; // Connection zone admin
-}elseif($page === 'Deconnexion'){
-	require ROOT.'/pages/users/disconnect.php'; // Deconnection zone admin
-}elseif($page === '403'){ // Erreur 403
-	require ROOT.'/pages/errors/403.php';
-}elseif($page === '404'){ // Erreur 404
-	require ROOT.'/pages/errors/404.php';
+}
+
+elseif($page === 'Connexion'){ // Si la variable `page` est égale à `Connexion`
+	require ROOT.'/pages/users/login.php'; // Alors on fait appelle au fichier `login.php`
+}elseif($page === 'Deconnexion'){ // Si la variable `page` est égale à `Deconnexion`
+	require ROOT.'/pages/users/disconnect.php'; // Alors on fait appelle au fichier `disconnect.php`
+}elseif($page === '403'){ // Si la variable `page` est égale à `403`
+	require ROOT.'/pages/errors/403.php'; // Alors on fait appelle au fichier `403.php`
+}elseif($page === '404'){ // Si la variable `page` est égale à `404`
+	require ROOT.'/pages/errors/404.php'; // Alors on fait appelle au fichier `404.php`
 }
 
 $content = ob_get_clean(); // On décharge/supprime le cache
