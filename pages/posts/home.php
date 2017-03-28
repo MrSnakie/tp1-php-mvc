@@ -33,8 +33,15 @@
     <div class="col-md-3">
         <h2>Trier par services</h2>
         <hr class="my-separator">
-        <ul>
-            
-        </ul>
+        <form action="index.php" method="post">
+            <select class="form-control" name="service">
+                <option disabled selected hidden>Sélectionner un service</option>
+                <?php foreach(App::getInstance()->getTable('service')->all() as $services): ?>
+                    <option value="<?= $services->id ?>"><?= $services->name ?></option>
+                <?php endforeach; ?>
+            </select>
+            </br>
+            <input type="submit" class="btn btn-info size" value="Lancer le tri" />
+        </form>
     </div> 
 </div>
