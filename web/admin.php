@@ -45,6 +45,8 @@ if ($page==='home') { // Page 'home'
     require ROOT.'/pages/admin/users/add.php';
 
 # Services
+}elseif($page==='services.add'){
+    require ROOT.'/pages/admin/services/add.php';
 
 # Page d'erreur
 }else{ // Erreur 404
