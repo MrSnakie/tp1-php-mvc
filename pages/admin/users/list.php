@@ -22,9 +22,10 @@
                         <td><?= $user->phone ?></td>
                         <td><?= $user->service ?></td>
                         <td>
+                            <a class="btn btn-xs btn-info" href="admin.php?p=users.edit&id=<?= $user->id ?>">Modifier</a>
                             <form style="display: inline-block;" action="admin.php?p=users.delete" method="post">
                             <input type="hidden" name="id" value="<?= $user->id; ?>">
-                            <input type="submit" class="btn btn-xs btn-danger" name="OK" value="Supprimer">
+                            <input type="submit" class="btn btn-xs btn-danger" name="OK" value="X">
                         </form>
                         </td>
                     </tr>

@@ -43,6 +43,8 @@ if ($page==='home') { // Page 'home'
 # Utilisateurs
 }elseif($page==='users.add'){
     require ROOT.'/pages/admin/users/add.php';
+}elseif($page==='users.edit'){
+    require ROOT.'/pages/admin/users/edit.php';
 }elseif($page==='users.delete'){
     require ROOT.'/pages/admin/users/delete.php';
 }elseif($page==='users.list'){
