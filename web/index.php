@@ -29,17 +29,23 @@ if($auth->logged()){
 
 ob_start(); // On créer un cache
 
+# Page d'accueil
 if($page === 'home'){ // Si la variable 'page' est égale à 'home'
-	require ROOT.'/pages/posts/home.php'; // Alors on fait appelle au fichier 'home.php'
+	require ROOT.'/pages/users/home.php'; // Alors on fait appelle au fichier 'home.php'
 }
 
+# Autres pages
+
+# Espace admin
 elseif($page === 'Connexion'){ // Si la variable `page` est égale à `Connexion`
 	require ROOT.'/pages/users/login.php'; // Alors on fait appelle au fichier `login.php`
 }elseif($page === 'Deconnexion'){ // Si la variable `page` est égale à `Deconnexion`
 	require ROOT.'/pages/users/disconnect.php'; // Alors on fait appelle au fichier `disconnect.php`
+
+# Page d'erreur
 }elseif($page === '403'){ // Si la variable `page` est égale à `403`
 	require ROOT.'/pages/errors/403.php'; // Alors on fait appelle au fichier `403.php`
-}elseif($page === '404'){ // Si la variable `page` est égale à `404`
+}else{ // Sinon si la variable `page` est égale à `404`
 	require ROOT.'/pages/errors/404.php'; // Alors on fait appelle au fichier `404.php`
 }
 

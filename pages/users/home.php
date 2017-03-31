@@ -5,23 +5,19 @@
         <table class="col-md-12 table table-hover">
             <thead>
                 <tr>
-                    <th>Prénom</th>
-                    <th>Nom</th>
+                    <th>Nom / Prénom</th>
                     <th>Âge</th>
-                    <th>Adresse</th>
-                    <th>Code postal</th>
+                    <th>Adresse / Code postal</th>
                     <th>Téléphone</th>
                     <th>Service</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach(App::getInstance()->getTable('users')->all() as $user): ?>
+                <?php foreach(App::getInstance()->getTable('user')->byServiceName() as $user): ?>
                     <tr>
-                        <td><?= $user->first_name ?></td>
-                        <td><?= $user->last_name ?></td>
+                        <td><?= $user->first_name .' '. $user->last_name ?></td>
                         <td><?= $user->age ?></td>
-                        <td><?= $user->adress ?></td>
-                        <td><?= $user->postal_code ?></td>
+                        <td><?= $user->adress .' - '. $user->postal_code ?></td>
                         <td><?= $user->phone ?></td>
                         <td><?= $user->service ?></td>
                     </tr>
@@ -36,8 +32,8 @@
         <form action="index.php" method="post">
             <select class="form-control" name="service">
                 <option disabled selected hidden>Sélectionner un service</option>
-                <?php foreach(App::getInstance()->getTable('service')->all() as $services): ?>
-                    <option value="<?= $services->id ?>"><?= $services->name ?></option>
+                <?php foreach(App::getInstance()->getTable('service')->all() as $service): ?>
+                    <option value="<?= $service->id ?>"><?= $service->name ?></option>
                 <?php endforeach; ?>
             </select>
             </br>

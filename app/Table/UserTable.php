@@ -5,11 +5,11 @@ use Core\Table\Table;
 /**
 * 
 */
-class UsersTable extends Table
+class UserTable extends Table
 {
     protected $table = "users";
 
-    public function all()
+    public function byServiceName()
     {
         return $this->query(" SELECT users.id,
                                      users.first_name,
@@ -18,10 +18,10 @@ class UsersTable extends Table
                                      users.adress,
                                      users.postal_code,
                                      users.phone,
-                                     service.name as service
+                                     services.name as service
                                 FROM users
-                                LEFT JOIN service
-                                       ON service_id = service.id
+                                LEFT JOIN services
+                                       ON service_id = services.id
                                 ORDER BY users.first_name
                             ");
     }
