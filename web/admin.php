@@ -36,8 +36,17 @@ $admin = '<li><a href="admin.php">Administration</a></li>';
 
 ob_start();
 
+# Page d'accueil
 if ($page==='home') { // Page 'home'
     require ROOT.'/pages/admin/index.php';
+
+# Utilisateurs
+}elseif($page==='users.add'){
+    require ROOT.'/pages/admin/users/add.php';
+
+# Services
+
+# Page d'erreur
 }else{ // Erreur 404
     require ROOT.'/pages/errors/404.php';
 }
