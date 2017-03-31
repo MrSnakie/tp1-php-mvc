@@ -16,9 +16,11 @@
                         <td><?= $service->name ?></td>
                         <td><?= $service->description ?></td>
                         <td>
+                            <a class="btn btn-xs btn-info" href="admin.php?p=services.edit&id=<?= $service->id ?>">Modifier</a>
                             <form style="display: inline-block;" action="admin.php?p=services.delete" method="post">
                             <input type="hidden" name="id" value="<?= $service->id; ?>">
-                            <input type="submit" class="btn btn-xs btn-danger" name="OK" value="Supprimer">
+                            <input type="submit" class="btn btn-xs btn-danger" name="OK" value="X">
+                            </form>
                         </td>
                     </tr>
                 <?php endforeach; ?>

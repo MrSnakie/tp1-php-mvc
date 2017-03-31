@@ -53,6 +53,8 @@ if ($page==='home') { // Page 'home'
 # Services
 }elseif($page==='services.add'){
     require ROOT.'/pages/admin/services/add.php';
+}elseif($page==='services.edit'){
+    require ROOT.'/pages/admin/services/edit.php';
 }elseif($page==='services.delete'){
     require ROOT.'/pages/admin/services/delete.php';
 }elseif($page==='services.list'){
