@@ -35,6 +35,9 @@ if($page === 'home'){ // Si la variable 'page' est égale à 'home'
 }
 
 # Autres pages
+elseif($page==='users.service'){ // Si la variage 'page est égale à 'users.service
+	require ROOT.'/pages/users/service.php'; // Alors on fait appelle au fichier 'service.php'
+}
 
 # Espace admin
 elseif($page === 'Connexion'){ // Si la variable `page` est égale à `Connexion`
