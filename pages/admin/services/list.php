@@ -7,6 +7,7 @@
                 <tr>
                     <th>Nom du service</th>
                     <th>Description du service</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -14,6 +15,11 @@
                     <tr>
                         <td><?= $service->name ?></td>
                         <td><?= $service->description ?></td>
+                        <td>
+                            <form style="display: inline-block;" action="admin.php?p=services.delete" method="post">
+                            <input type="hidden" name="id" value="<?= $service->id; ?>">
+                            <input type="submit" class="btn btn-xs btn-danger" name="OK" value="Supprimer">
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
