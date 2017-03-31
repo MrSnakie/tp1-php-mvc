@@ -19,10 +19,10 @@ $app = App::getInstance();
 $auth = new DBAuth($app->getDb());
 if($auth->logged()){
     $connect = 'Deconnexion';
-    $test = '<li><a href="admin.php">Administration</a></li>';
+    $admin = '<li><a href="admin.php">Administration</a></li>';
 }else{
 	$connect = 'Connexion';
-	$test = '';
+	$admin = '';
 }
 
 ##################################
@@ -41,9 +41,9 @@ elseif($page==='users.service'){ // Si la variage 'page est égale à 'users.ser
 
 # Espace admin
 elseif($page === 'Connexion'){ // Si la variable `page` est égale à `Connexion`
-	require ROOT.'/pages/users/login.php'; // Alors on fait appelle au fichier `login.php`
+	require ROOT.'/pages/admin_users/login.php'; // Alors on fait appelle au fichier `login.php`
 }elseif($page === 'Deconnexion'){ // Si la variable `page` est égale à `Deconnexion`
-	require ROOT.'/pages/users/disconnect.php'; // Alors on fait appelle au fichier `disconnect.php`
+	require ROOT.'/pages/admin_users/disconnect.php'; // Alors on fait appelle au fichier `disconnect.php`
 
 # Page d'erreur
 }elseif($page === '403'){ // Si la variable `page` est égale à `403`
