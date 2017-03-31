@@ -29,9 +29,8 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
+            <?= $admin ?>
+            <li><a href="index.php?p=<?= $connect ?>"><?= $connect ?></a></li>
           </ul>
         </div>
       </div>

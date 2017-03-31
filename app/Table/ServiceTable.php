@@ -5,5 +5,5 @@ use Core\Table\Table;
 
 class ServiceTable extends Table
 {
-    protected $table='service';
+    protected $table='services';
 }

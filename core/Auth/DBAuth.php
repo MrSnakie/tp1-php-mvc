@@ -15,9 +15,9 @@ class DBAuth
 
     public function login($username, $password){ // Fonction pour récupérer les infos de connexion d'un admin
         $user = $this->db->prepare("SELECT *
-                                    FROM users
+                                    FROM admin
                                     WHERE name = ?",
-                                   [$username], null, true); // Séléctionne toute la table 'users' et on le récupère dans un objet standard sur une ligne
+                                   [$username], null, true); // Séléctionne toute la table 'admin' et on le récupère dans un objet standard sur une ligne
         if($user){
             if($user->password === sha1($password)){ // 'sha1' crypte le mot de passe
                 $_SESSION['Auth'] = $user->id; // On commence une nouvelle session
