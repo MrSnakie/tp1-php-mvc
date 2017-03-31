@@ -26,6 +26,7 @@
                             <form style="display: inline-block;" action="admin.php?p=users.delete" method="post">
                             <input type="hidden" name="id" value="<?= $user->id; ?>">
                             <input type="submit" class="btn btn-xs btn-danger" name="OK" value="X">
+                            </form>
                         </form>
                         </td>
                     </tr>

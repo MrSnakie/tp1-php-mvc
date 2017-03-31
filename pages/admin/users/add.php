@@ -14,7 +14,7 @@
                                                     ]);
             if($res){
                 // message flash
-                header('location: admin.php?p=users.edit');
+                header('location: admin.php?p=users.list');
             }
         }
     }

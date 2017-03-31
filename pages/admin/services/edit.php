@@ -22,7 +22,7 @@
 
 <div class="row">
 
-    <h1>Edition de l'utilisateur</h1>
+    <h1>Edition du service</h1>
 
     <hr class="my-separator">
 

@@ -9,7 +9,7 @@
                                                     ]);
             if($res){
                 // message flash
-                header('location: admin.php');
+                header('location: admin.php?p=services.list');
             }
         }
     }
