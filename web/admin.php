@@ -43,10 +43,14 @@ if ($page==='home') { // Page 'home'
 # Utilisateurs
 }elseif($page==='users.add'){
     require ROOT.'/pages/admin/users/add.php';
+}elseif($page==='users.list'){
+    require ROOT.'/pages/admin/users/list.php';
 
 # Services
 }elseif($page==='services.add'){
     require ROOT.'/pages/admin/services/add.php';
+}elseif($page==='services.list'){
+    require ROOT.'/pages/admin/services/list.php';
 
 # Page d'erreur
 }else{ // Erreur 404
